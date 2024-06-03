@@ -1,4 +1,6 @@
 .FeedbackButton{
-    background-color: Black;
-    color: white;
+    background-color: var(--background-color-primary);
+    COLOR:WHITE;
+    border-radius: 5px;
+    
 }
