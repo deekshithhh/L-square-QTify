@@ -1,6 +1,7 @@
 .FeedbackButton{
     background-color: var(--background-color-primary);
-    COLOR:WHITE;
+    COLOR:var(--color-primary);
     border-radius: 5px;
+    font-family: poppins;
     
 }

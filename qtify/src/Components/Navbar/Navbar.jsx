@@ -8,7 +8,7 @@ export default function MyNavbar() {
   return (
     <nav class="navbar" className={styles.navbar}>
       <a href="/"><AppLogo/></a>
-      <NavSearch placeholdertext="Search for a album of your choice"/>
+      <NavSearch search="Search for a album of your choice"/>
       <FeedBackButton text="Give Feedback"/>
     </nav>
   );
