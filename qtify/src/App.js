@@ -1,16 +1,15 @@
 
 import './App.css';
 import MyNavbar from './Components/Navbar/Navbar';
+import Homepage from './Components/Homepage/Homepage'
 import { StyledEngineProvider } from '@mui/material/styles';
 
 function App() {
   return (
     <div className="App">
+<Homepage/>
 
 
-<StyledEngineProvider injectFirst>
-<MyNavbar/>
-    </StyledEngineProvider>
      
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" />
