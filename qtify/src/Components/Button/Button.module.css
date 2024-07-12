@@ -1,7 +1,13 @@
 .FeedbackButton{
     background-color: var(--background-color-primary);
     COLOR:var(--color-primary);
-    border-radius: 5px;
-    font-family: "Poppins";
-    
+    border-radius: 12px;
+    font-size: 18px; 
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  line-height: 27px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  
 }
+
