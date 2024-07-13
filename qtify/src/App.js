@@ -2,12 +2,23 @@
 import './App.css';
 import MyNavbar from './Components/Navbar/Navbar';
 import Homepage from './Components/Homepage/Homepage'
+import HeroImage from './Components/HeroImage/Heroimage';
 import { StyledEngineProvider } from '@mui/material/styles';
+import { useEffect, useState } from 'react'
+import Cardsfunction from './Components/Cards/Cards';
+import Section from './Components/Section/Section';
 
 function App() {
+   
   return (
     <div className="App">
-<Homepage/>
+<StyledEngineProvider injectFirst>
+<MyNavbar/>
+<HeroImage/>
+ <Section/>
+
+   </StyledEngineProvider>
+
 
 
      
