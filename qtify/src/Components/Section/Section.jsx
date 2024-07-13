@@ -50,6 +50,16 @@ const Sections = () => {
           </Grid>
         ))}
       </Grid>
+      <div>
+      <Typography variant="h5" className={styles.SectionTitle}>New Albums</Typography>
+      <Typography variant="body2" className={styles.ShowAll}>Show all</Typography></div>
+      <Grid container spacing={2}>
+        {albums.map((album, index) => (
+          <Grid item key={index} xs={12} sm={6} md={4} lg={2}>
+            <Cardsfunction data={album}  />
+          </Grid>
+        ))}
+      </Grid>
       
     </Container>
   );
