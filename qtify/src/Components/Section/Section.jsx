@@ -27,7 +27,7 @@ const Sections = () => {
         console.error('Error fetching albums:', error);
       }
     }
-
+    fetchAlbums();
     fetchtopalbums();
   }, []);
 
@@ -49,6 +49,8 @@ const Sections = () => {
           </Typography>
         </AccordionDetails>
       </Accordion> */}
+      
+
       <div>
       <Typography variant="h5" className={styles.SectionTitle}>Top Albums</Typography>
       <Typography variant="body2" className={styles.ShowAll}>Show all</Typography></div>
@@ -59,6 +61,7 @@ const Sections = () => {
           </Grid>
         ))}
       </Grid>
+     
       <div>
       <Typography variant="h5" className={styles.SectionTitle}>New Albums</Typography>
       <Typography variant="body2" className={styles.ShowAll}>Show all</Typography></div>
