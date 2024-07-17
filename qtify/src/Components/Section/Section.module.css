@@ -10,14 +10,6 @@
     display:flex
   }
 
-  /* .ShowAll {
-    color: var(--color-primary);
-    cursor: pointer;
-    text-align: right;
-    align-items:Center;
-    margin-top: 10px;
-  } */
-
-  .ShowAll{
-    background-color: --var(--color-black);
+  .toggle{
+    color:var(--color-primary)
   }
