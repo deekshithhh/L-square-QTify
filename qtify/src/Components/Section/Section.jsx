@@ -7,7 +7,7 @@ import Carousel from '../Carousel/Carousel';
 
 const Sections = ({data,title}) => {
 
-  const[isCarosel,setIsCarosel]=useState(true);
+  const[isCarosel,setIsCarosel]=useState(false);
 
   const toggleCarousel = () => {
     setIsCarosel(prevState => !prevState);
