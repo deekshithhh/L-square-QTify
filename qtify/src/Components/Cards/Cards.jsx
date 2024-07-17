@@ -5,43 +5,7 @@ import styles from './Cards.module.css'
 
 
 const Cardsfunction = ({data}) => {
-    // return (
-    //     <div>
-    //      <Card className={styles.Cardsstyle}>
-    //      <CardMedia
-    //     image="https://i.pinimg.com/736x/3a/f0/e5/3af0e55ea66ea69e35145fb108b4a636.jpg?b=t"
-
-    //   />
-    //   <Chip className="chipclass" label="Chip Filled" />
-    //   <CardContent>
-        
-    //   </CardContent>
-    //      </Card>
-    //     </div>
-    // );
-//     return (
-//       <div>
-//       <Card sx={{ maxWidth: 200, margin: '10px', }}>
-//         <CardMedia
-//           component="img"
-//           height="140"
-//           image="https://www.seoclerk.com/pics/000/765/234/e78d6b0a7aaa332ff21e27b70ff8b85e.png"
-          
-//         />
-//         <CardContent>
-//           <Chip label="Follows"/>
-          
-//         </CardContent>
-        
-//       </Card>
-//       <Typography gutterBottom variant="h6" component="div">
-//       100 Album Songs
-//     </Typography>
-//     </div>
-//     );
-// }
- //const {follows,image,slug,songs,title}=data;
-console.log(data, "Daat")
+console.log(data, "API Data")
 return (
   <Box className={styles.BoxClass}>
      

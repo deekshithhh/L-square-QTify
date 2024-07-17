@@ -8,7 +8,7 @@ export default function NavSearch({search}){
 <div class="input-group" className={styles.formcontrol}>
   <input type="text" class="form-control" placeholder="Search a song of your choice" aria-label="Search a song of your choice" aria-describedby="basic-addon2"></input>
   <div class="input-group-append">
-    <button type="submit"><img src={SearchIcon}/></button>
+    <button className={styles.SearchIcon} type="submit"><img src={SearchIcon}/></button>
   </div>
 </div>
 

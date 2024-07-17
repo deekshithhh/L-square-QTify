@@ -3,76 +3,35 @@ import { Grid, Container,Accordion, AccordionSummary ,AccordionDetails, Typograp
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Cardsfunction from "../Cards/Cards";
 import styles from "./Section.module.css"
+import Carousel from '../Carousel/Carousel';
 
-const Sections = () => {
-  const [albums, setAlbums] = useState([]);
-  const [topalbums,setTopalbums]=useState([]);
+const Sections = ({data,title}) => {
 
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        const response = await fetch('https://qtify-backend-labs.crio.do/albums/top');
-        const data = await response.json();
-        setAlbums(data);
-      } catch (error) {
-        console.error('Error fetching albums:', error);
-      }
-    };
-    const fetchtopalbums=async()=>{
-      try {
-        const response = await fetch('https://qtify-backend-labs.crio.do/albums/new');
-        const data = await response.json();
-        setTopalbums(data);
-      } catch (error) {
-        console.error('Error fetching albums:', error);
-      }
-    }
-    fetchAlbums();
-    fetchtopalbums();
-  }, []);
+  const[isCarosel,setIsCarosel]=useState(false);
+
+  const toggleCarousel = () => {
+    setIsCarosel(prevState => !prevState);
+  };
 
   return (
-    
     <Container className={styles.Containerclass}>
-      {/* <Accordion defaultExpanded>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography>Expanded by default</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion> */}
-      
+        <div className={styles.SectionTitle}>
+<div>{title}</div>
+{
+  isCarosel?<div onClick={toggleCarousel}>Collapse</div>:<div onClick={toggleCarousel}>Show All</div>
+}
+</div>
+{
+  isCarosel?<Carousel Album={data} renderComponent={(data)=>  <Cardsfunction data={data}  />}/>:<Grid container spacing={2}>
+  {data.map((album, index) => (
+    <Grid item key={index} xs={12} sm={6} md={4} lg={2}>
+      <Cardsfunction data={album}  />
+    </Grid>
+  ))}
+</Grid> 
+}
 
-      <div>
-      <Typography variant="h5" className={styles.SectionTitle}>Top Albums</Typography>
-      <Typography variant="body2" className={styles.ShowAll}>Show all</Typography></div>
-      <Grid container spacing={2}>
-        {albums.map((album, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={2}>
-            <Cardsfunction data={album}  />
-          </Grid>
-        ))}
-      </Grid>
-     
-      <div>
-      <Typography variant="h5" className={styles.SectionTitle}>New Albums</Typography>
-      <Typography variant="body2" className={styles.ShowAll}>Show all</Typography></div>
-      <Grid container spacing={2}>
-        {topalbums.map((album, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={2}>
-            <Cardsfunction data={album}  />
-          </Grid>
-        ))}
-      </Grid>
-      
+        
     </Container>
   );
 };

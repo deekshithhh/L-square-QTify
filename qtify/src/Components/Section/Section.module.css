@@ -1,18 +1,23 @@
 .Containerclass{
     background-color: var(--color-black);
     width:100%;
+    padding: 10px;
 }
 .SectionTitle {
     color: #fff;
     margin-bottom: 10px;
-    justify-content:left;
+    justify-content:space-between;
     display:flex
   }
 
-  .ShowAll {
+  /* .ShowAll {
     color: var(--color-primary);
     cursor: pointer;
     text-align: right;
     align-items:Center;
     margin-top: 10px;
+  } */
+
+  .ShowAll{
+    background-color: --var(--color-black);
   }
