@@ -39,8 +39,9 @@ function App() {
 <StyledEngineProvider injectFirst>
 <MyNavbar/>
 <HeroImage/>
+<Section data={topalbums} title={"Top Album"}/>
  <Section data={albums} title={"New Album"}/>
- <Section data={topalbums} title={"Top Album"}/>
+ 
    </StyledEngineProvider>
 
 
