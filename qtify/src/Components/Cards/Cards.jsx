@@ -14,7 +14,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Cards.module.css";
 
 const Cardsfunction = ({ data, type }) => {
-   console.log(data, "API Data");
+ //  console.log(data, "API Data");
   // console.log(type, "type");
   // let chipdata=1;
   // if(type==="Songs"){

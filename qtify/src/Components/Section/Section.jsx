@@ -29,7 +29,7 @@ const Sections = ({ data, title,type,genres }) => {
       setIsSong(1)
     }
   },[])
-  console.log("Genres",genres)
+  //console.log("Genres",genres)
   return (
     <Container className={styles.Containerclass}>
       <div className={styles.SectionTitle}>

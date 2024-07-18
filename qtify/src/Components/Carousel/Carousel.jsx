@@ -14,7 +14,7 @@ const Controls = ({ data }) => {
 };
 
 const Carousel = ({ Album, renderComponent }) => {
-  console.log(Album, "Album");
+ // console.log(Album, "Album");
 
   return (
     <Swiper

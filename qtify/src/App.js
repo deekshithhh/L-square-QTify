@@ -47,7 +47,7 @@ function App() {
         const response = await fetch('https://qtify-backend-labs.crio.do/genres');
         const data = await response.json();
         setGenretypes(data.data);
-        console.log(genretypes,"genre")
+        //console.log(genretypes,"genre")
       } catch (error) {
         console.error('Error fetching songs:', error);
       }
