@@ -13,3 +13,10 @@
   .toggle{
     color:var(--color-primary)
   }
+  .genreTab {
+    color: var(--color-white) !important;
+  }
+  
+  .genreTab.Mui-selected {
+    color: --var(--color-primary) !important;
+  }

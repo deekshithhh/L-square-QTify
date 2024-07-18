@@ -11,6 +11,8 @@ import Section from './Components/Section/Section';
 function App() {
   const [albums, setAlbums] = useState([]);
   const [topalbums,setTopalbums]=useState([]);
+  const [songs,setSongs]=useState([]);
+  const [genretypes,setGenretypes]=useState([]);
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -31,16 +33,38 @@ function App() {
         console.error('Error fetching albums:', error);
       }
     }
+    const fetchsongs = async () => {
+      try {
+        const response = await fetch('https://qtify-backend-labs.crio.do/songs');
+        const data = await response.json();
+        setSongs(data);
+      } catch (error) {
+        console.error('Error fetching songs:', error);
+      }
+    };
+    const fetchgenre = async () => {
+      try {
+        const response = await fetch('https://qtify-backend-labs.crio.do/genres');
+        const data = await response.json();
+        setGenretypes(data.data);
+        console.log(genretypes,"genre")
+      } catch (error) {
+        console.error('Error fetching songs:', error);
+      }
+    };
     fetchAlbums();
     fetchtopalbums();
+    fetchsongs();
+    fetchgenre()
   }, []);
   return (
     <div className="App">
 <StyledEngineProvider injectFirst>
 <MyNavbar/>
 <HeroImage/>
-<Section data={topalbums} title={"Top Album"}/>
- <Section data={albums} title={"New Album"}/>
+<Section data={topalbums} title="Top Album" type="Album"/>
+ <Section data={albums} title="New Album" type="Album"/>
+ <Section data={songs} title="Songs" type="Songs" genres={genretypes}/>
  
    </StyledEngineProvider>
 
